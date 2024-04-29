@@ -1,14 +1,17 @@
+/* Basic Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #283593; /* Deep blue */
+    color: #ffffff;
     text-align: center;
+    padding: 20px 0;
 }
 
 nav ul {
@@ -18,30 +21,50 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* Section Styling */
 section {
+    margin: 8px 0;
     padding: 20px;
-    margin: 10px;
-    border: 1px solid #ccc;
+    background-color: #f0f0f0; /* Light grey background */
 }
 
+.section-heading {
+    color: #1a237e; /* Dark blue */
+    margin-bottom: 10px;
+}
+
+.project, #publications {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.project h3 {
+    color: #283593; /* Matching header color */
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #283593; /* Deep blue */
     color: white;
 }
 
-@media (max-width: 600px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
     nav ul li {
         display: block;
-        text-align: center;
+        margin-top: 10px;
     }
 }
