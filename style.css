@@ -4,11 +4,13 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light grey text */
 }
 
 /* Header Styles with Gradient */
 header {
-    background: linear-gradient(to right, #283593, #3f51b5); /* Gradient from deep blue to a lighter blue */
+    background: linear-gradient(to right, #283593, #3f51b5);
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -32,7 +34,7 @@ nav ul li a {
 
 /* Hover effect for navigation links */
 nav ul li a:hover {
-    color: #ccccff; /* Lighter shade for hover */
+    color: #b39ddb;
     text-decoration: underline;
 }
 
@@ -40,8 +42,8 @@ nav ul li a:hover {
 section {
     margin: 8px 0;
     padding: 20px;
-    background-color: #f0f0f0; /* Light grey background */
-    animation: fadeIn 1s ease-out; /* Fade-in animation */
+    background-color: #1e1e1e; /* Dark grey background */
+    animation: fadeIn 1s ease-out;
 }
 
 @keyframes fadeIn {
@@ -51,25 +53,25 @@ section {
 
 /* Project cards styling with hover effect */
 .project, #publications {
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: #252525;
+    border: 1px solid #333;
     padding: 15px;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project h3 {
-    color: #283593; /* Matching header color */
+    color: #283593;
 }
 
 .project:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Adding shadow for depth */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* Footer Styles with Gradient */
 footer {
-    background: linear-gradient(to right, #283593, #3f51b5); /* Consistent gradient with the header */
+    background: linear-gradient to right, #283593, #3f51b5);
     text-align: center;
     padding: 10px;
     color: white;
