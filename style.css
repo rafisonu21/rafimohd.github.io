@@ -1,86 +1,124 @@
-/* Basic Reset */
-body, html {
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to right, #1a1a2e, #16213e, #0f3460);
+    color: #e0e0e0;
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light grey text */
 }
 
-/* Header Styles with Gradient */
 header {
-    background: linear-gradient(to right, #283593, #3f51b5);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 2rem;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+#hero {
+    padding: 4rem 2rem;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+#hero h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-/* Hover effect for navigation links */
-nav ul li a:hover {
-    color: #b39ddb;
-    text-decoration: underline;
+button {
+    background: #e94560;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
 }
 
-/* Section Styling */
-section {
-    margin: 8px 0;
-    padding: 20px;
-    background-color: #1e1e1e; /* Dark grey background */
-    animation: fadeIn 1s ease-out;
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.8);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+#user-input {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
-/* Project cards styling with hover effect */
-.project, #publications {
-    background-color: #252525;
-    border: 1px solid #333;
-    padding: 15px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#user-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
 }
 
-.project h3 {
-    color: #283593;
+#user-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.hidden {
+    display: none;
 }
 
-/* Footer Styles with Gradient */
-footer {
-    background: linear-gradient to right, #283593, #3f51b5);
-    text-align: center;
-    padding: 10px;
-    color: white;
+/* Floating 'mirror' effect */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-top: 10px;
-    }
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-20px); }
+    100% { transform: translatey(0px); }
 }
+
+/* Futuristic trading card styling */
+.parallel-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.parallel-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, rgba(255, 255, 255, 0.2), transparent 30%);
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+.parallel-card h3 {
+    font-size: 1.8rem;
